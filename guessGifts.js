@@ -9,6 +9,8 @@ const presents = [
     {size: 'small', clatters: 'yes', weight: 'light'}
 ]
 
+//// My Solution ////
+
 function guessGifts (wishArr, presArr) {
     let guessed = []
     presArr.forEach( p => {
@@ -19,6 +21,25 @@ function guessGifts (wishArr, presArr) {
         })
     })
     return guessed
+}
+
+console.log(guessGifts(wishlist, presents))
+
+
+//// Jared's Solution ////
+
+function guessGifts(wishArr, presArr) {
+    guesses = []
+    for (let i = 0; i < wishArr.length; i++) {
+        let currentWishArr = wishArr[i]
+    for (let k = 0; k < presArr.length; k++) {
+        let currentPresArr = presArr[k]
+    
+    if (currentWishArr.size === currentPresArr.size && currentWishArr.clatters === currentPresArr.clatters && currentWishArr.weight === currentPresArr.weight) {
+        guesses.push(currentWishArr.name)}
+    }
+    }
+    return guesses
 }
 
 console.log(guessGifts(wishlist, presents))
